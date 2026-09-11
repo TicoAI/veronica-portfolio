@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Veronica Pierce</title>
+<meta name="description" content="Bilingual QA specialist for conversational-AI voice products, and a working painter and muralist.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Public+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --paper:#F7F6F1; --surface:#FFFFFF; --ink:#10231E; --body:#2C3A35;
+  --muted:#5E6E68; --line:#DDE2DC; --jade:#136F61; --jade-soft:#E4EFEB;
+  --marigold:#C8881F; --shadow:0 1px 2px rgba(16,35,30,.06),0 8px 24px rgba(16,35,30,.06);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --paper:#0C1714; --surface:#132420; --ink:#EAF1EC; --body:#C3D0CA;
+    --muted:#8FA098; --line:#22352F; --jade:#3FB9A2; --jade-soft:#16302A;
+    --marigold:#E3B054; --shadow:0 1px 2px rgba(0,0,0,.4),0 10px 30px rgba(0,0,0,.35);
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0C1714; --surface:#132420; --ink:#EAF1EC; --body:#C3D0CA;
+  --muted:#8FA098; --line:#22352F; --jade:#3FB9A2; --jade-soft:#16302A;
+  --marigold:#E3B054; --shadow:0 1px 2px rgba(0,0,0,.4),0 10px 30px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--body);
+  font-family:"Public Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+.wrap{max-width:960px;margin:0 auto;padding-inline:24px}
+h1,h2,h3{font-family:Fraunces,Georgia,"Times New Roman",serif;color:var(--ink);text-wrap:balance;margin:0}
+a{color:var(--jade)}
+.eyebrow{font-family:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;font-size:12px;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+
+/* ---------- hero ---------- */
+header.hero{padding-block:72px 52px;border-bottom:1px solid var(--line)}
+h1{font-size:clamp(46px,8vw,82px);font-weight:700;line-height:1.02;letter-spacing:-.02em;margin:14px 0 0}
+.thesis{font-family:Fraunces,Georgia,serif;font-size:clamp(21px,3.2vw,30px);line-height:1.35;
+  color:var(--ink);font-weight:400;margin:18px 0 0;max-width:20ch}
+.thesis em{font-style:italic;color:var(--jade)}
+.intro{margin:20px 0 0;max-width:62ch}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.btn{display:inline-block;padding:12px 20px;border-radius:2px;font-weight:600;font-size:15px;
+  text-decoration:none;border:1.5px solid var(--ink);color:var(--ink);background:transparent}
+.btn.solid{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.btn:focus-visible,a:focus-visible{outline:2.5px solid var(--marigold);outline-offset:3px}
+
+/* ---------- stats ---------- */
+.stats{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--line);
+  border-block:1px solid var(--line);margin-top:0}
+.stat{background:var(--paper);padding:22px 18px}
+.stat .n{font-family:Fraunces,Georgia,serif;font-size:28px;font-weight:600;color:var(--ink);
+  font-variant-numeric:tabular-nums;line-height:1}
+.stat .l{font-size:13px;color:var(--muted);margin-top:6px;line-height:1.35}
+
+/* ---------- sections ---------- */
+section{padding-block:56px;border-bottom:1px solid var(--line)}
+h2{font-size:clamp(26px,4vw,36px);font-weight:600;letter-spacing:-.01em}
+.sec-lead{margin:12px 0 0;max-width:62ch;color:var(--muted)}
+
+.two{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:34px}
+.disc{background:var(--surface);border:1px solid var(--line);box-shadow:var(--shadow);padding:28px}
+.disc h3{font-size:23px;font-weight:600;margin-bottom:4px}
+.disc .kicker{font-family:"JetBrains Mono",monospace;font-size:11.5px;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--jade)}
+.disc ul{margin:14px 0 0;padding-left:18px}
+.disc li{margin-bottom:7px}
+
+/* QA log: real products, real checks */
+.log{margin-top:18px;border-top:1px dashed var(--line);padding-top:14px;
+  font-family:"JetBrains Mono",monospace;font-size:12.5px;line-height:1.9;color:var(--muted)}
+.log b{color:var(--ink);font-weight:500}
+
+/* ---------- work gallery ---------- */
+.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:34px}
+.piece{border:1px solid var(--line);background:var(--surface);overflow:hidden}
+.piece .art{aspect-ratio:4/3;display:grid;place-items:center;padding:16px;text-align:center;
+  background:linear-gradient(135deg,var(--jade-soft),var(--surface));border-bottom:1px solid var(--line)}
+.piece .art img{width:100%;height:100%;object-fit:cover;max-width:100%}
+.piece .art span{font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--muted)}
+.piece .cap{padding:14px 16px}
+.piece .cap b{display:block;color:var(--ink);font-weight:600;font-size:15.5px}
+.piece .cap small{color:var(--muted);font-size:13.5px}
+
+/* ---------- timeline ---------- */
+.tl{margin-top:30px;display:grid;gap:0}
+.row{display:grid;grid-template-columns:150px 1fr;gap:20px;padding:15px 0;border-top:1px solid var(--line)}
+.row:last-child{border-bottom:1px solid var(--line)}
+.row .when{font-family:"JetBrains Mono",monospace;font-size:12.5px;color:var(--muted);padding-top:3px;
+  font-variant-numeric:tabular-nums}
+.row .what b{color:var(--ink);font-weight:600}
+.row .what span{color:var(--muted)}
+
+/* ---------- contact ---------- */
+.contact{display:flex;flex-wrap:wrap;gap:14px 34px;margin-top:24px;align-items:center}
+.contact a{font-weight:600;text-decoration:none;border-bottom:1.5px solid var(--jade);padding-bottom:1px}
+footer{padding-block:36px 52px;color:var(--muted);font-size:14px}
+
+@media (max-width:820px){
+  .two{grid-template-columns:1fr}
+  .gal{grid-template-columns:1fr 1fr}
+  .stats{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:520px){
+  body{font-size:16px}
+  .gal{grid-template-columns:1fr}
+  .row{grid-template-columns:1fr;gap:4px}
+  header.hero{padding-block:52px 40px}
+}
+@media (prefers-reduced-motion:no-preference){
+  .btn{transition:background .18s ease,color .18s ease}
+  .btn:hover{background:var(--ink);color:var(--paper)}
+  .btn.solid:hover{background:var(--jade);border-color:var(--jade);color:#fff}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Boca Raton, Florida · English &amp; Español · Open to remote</div>
+    <h1>Veronica Pierce</h1>
+    <p class="thesis">I test the voice agents. Then I <em>paint the murals.</em></p>
+    <p class="intro">I'm a bilingual Quality Assurance and Customer-Experience specialist with over 15 years across
+      conversational-AI, customer service, and operations. I break, log, and verify AI voice products, and I design
+      the brand and launch graphics that ship right beside them. Two disciplines, one obsession: getting the details right.</p>
+    <div class="cta">
+      <a class="btn solid" href="Veronica_Pierce_Resume_REMOTE.pdf">Resume for Remote roles</a>
+      <a class="btn" href="Veronica_Pierce_Resume_BOCA_RATON.pdf">Resume for Boca Raton</a>
+      <a class="btn" href="mailto:Veronica@ticoai.net">Email me</a>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="stats">
+    <div class="stat"><div class="n">15+</div><div class="l">Years in customer experience</div></div>
+    <div class="stat"><div class="n">3</div><div class="l">AI voice products tested</div></div>
+    <div class="stat"><div class="n">100+</div><div class="l">Commissioned artworks</div></div>
+    <div class="stat"><div class="n">100%</div><div class="l">Job success on Upwork</div></div>
+    <div class="stat"><div class="n">2</div><div class="l">Native languages</div></div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <h2>Two disciplines</h2>
+    <p class="sec-lead">Most people testing conversational AI can't design the launch graphics. Most people painting
+      murals haven't written a defect report. I do both, and each one sharpens the other.</p>
+
+    <div class="two">
+      <article class="disc">
+        <div class="kicker">Quality Assurance</div>
+        <h3>Conversational-AI &amp; voice-agent quality</h3>
+        <ul>
+          <li>Stress-test voice-agent flows for accuracy, tone, and the real-world edge cases that trip lesser bots up.</li>
+          <li>Reproduce, log, and close out defects alongside engineering.</li>
+          <li>Score live and recorded interactions against quality and compliance benchmarks.</li>
+          <li>Calibrate quality scorecards with product and engineering to keep releases clean.</li>
+        </ul>
+        <div class="log">
+          <b>ATHENA</b> · ConnexŪS AI · voice-agent flows, tone, edge cases<br>
+          <b>WAVE</b> · Scale Agile Solutions · flows vs. acceptance criteria<br>
+          <b>DISA</b> · Vocodia Holdings, Nasdaq VOCO · live and recorded scoring
+        </div>
+      </article>
+
+      <article class="disc">
+        <div class="kicker">Art &amp; Design</div>
+        <h3>Painter, muralist &amp; graphic artist</h3>
+        <ul>
+          <li>An independent practice running since 2008, covering painting, murals, illustration, and digital design.</li>
+          <li>Murals and commissioned work across Costa Rica for corporate and private clients.</li>
+          <li>Brand, campaign, and product-launch graphics for the same AI products I test.</li>
+          <li>Illustrated a published children's book and delivered 100+ commissions.</li>
+        </ul>
+        <div class="log">
+          <b>100%</b> five-star rating · Upwork<br>
+          <b>2022</b> · The Adventure of the Lost World Cup, published<br>
+          <b>EN / ES</b> · voiceover and promotional video
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Selected work</h2>
+    <p class="sec-lead">A few pieces from the studio side of the practice.</p>
+    <div class="gal">
+      <figure class="piece" style="margin:0">
+        <div class="art"><span>Add image</span></div>
+        <figcaption class="cap"><b>The Adventure of the Lost World Cup</b><small>Children's book illustration · published 2022</small></figcaption>
+      </figure>
+      <figure class="piece" style="margin:0">
+        <div class="art"><span>Add image</span></div>
+        <figcaption class="cap"><b>Murals</b><small>Large-format wall work · Costa Rica</small></figcaption>
+      </figure>
+      <figure class="piece" style="margin:0">
+        <div class="art"><span>Add image</span></div>
+        <figcaption class="cap"><b>Paintings &amp; commissions</b><small>Private and corporate clients</small></figcaption>
+      </figure>
+      <figure class="piece" style="margin:0">
+        <div class="art"><span>Add image</span></div>
+        <figcaption class="cap"><b>Wave campaign graphics</b><small>Marketing design for the product rollout</small></figcaption>
+      </figure>
+      <figure class="piece" style="margin:0">
+        <div class="art"><span>Add image</span></div>
+        <figcaption class="cap"><b>ATHENA launch graphics</b><small>Website and product design support</small></figcaption>
+      </figure>
+      <figure class="piece" style="margin:0">
+        <div class="art"><span>Add image</span></div>
+        <figcaption class="cap"><b>Digital art &amp; video</b><small>Promotional pieces and voiceover</small></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Where I've been</h2>
+    <div class="tl">
+      <div class="row"><div class="when">2026 to Present</div><div class="what"><b>Founder &amp; Sole Manager</b>, TICO AI LLC <span>· Boca Raton, FL · Remote</span></div></div>
+      <div class="row"><div class="when">Jan to Jun 2026</div><div class="what"><b>QA Specialist</b>, ConnexŪS AI <span>· ATHENA · Remote</span></div></div>
+      <div class="row"><div class="when">2025 to 2026</div><div class="what"><b>QA Specialist</b>, Scale Agile Solutions <span>· Wave · Remote</span></div></div>
+      <div class="row"><div class="when">2024 to 2025</div><div class="what"><b>QA Specialist</b>, Vocodia Holdings Corp <span>· DISA · Remote</span></div></div>
+      <div class="row"><div class="when">2023</div><div class="what"><b>Inside Sales Associate</b>, Matt O'Neill Real Estate <span>· CRM &amp; lead qualification</span></div></div>
+      <div class="row"><div class="when">2022</div><div class="what"><b>Store Manager</b>, Fro Zen Bar <span>· operations, inventory, cash handling</span></div></div>
+      <div class="row"><div class="when">2018 to 2019</div><div class="what"><b>Receptionist / Floor Manager</b>, Casa Verde Lodge <span>· front desk &amp; guest services</span></div></div>
+      <div class="row"><div class="when">2013 to 2016</div><div class="what"><b>Customer Service Manager</b>, JazzSports <span>· bilingual team leadership</span></div></div>
+      <div class="row"><div class="when">2008 to 2013</div><div class="what"><b>Customer service &amp; quality roles</b> <span>· Concentrix, Vialinx and others</span></div></div>
+      <div class="row"><div class="when">2008 to Present</div><div class="what"><b>Painter, Muralist &amp; Graphic Artist</b>, self-employed <span>· concurrent throughout</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section style="border-bottom:none">
+  <div class="wrap">
+    <h2>Let's talk</h2>
+    <p class="sec-lead">I'm open to remote QA and customer-experience roles, and to office work here in Boca Raton.
+      Happy to share more of the portfolio on request, in English or Spanish.</p>
+    <div class="contact">
+      <a href="mailto:Veronica@ticoai.net">Veronica@ticoai.net</a>
+      <a href="tel:+15619208139">561-920-8139</a>
+      <a href="https://www.linkedin.com/in/veronica-pierce/">linkedin.com/in/veronica-pierce</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">Veronica Pierce · Boca Raton, Florida · Dual citizen of the United States and Costa Rica</div>
+</footer>
+
+</body>
+</html>
