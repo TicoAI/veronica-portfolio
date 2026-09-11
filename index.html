@@ -77,12 +77,20 @@ h2{font-size:clamp(26px,4vw,36px);font-weight:600;letter-spacing:-.01em}
 
 /* ---------- work gallery ---------- */
 .gal{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:34px}
-.piece{border:1px solid var(--line);background:var(--surface);overflow:hidden}
-.piece .art{aspect-ratio:4/3;display:grid;place-items:center;padding:16px;text-align:center;
+.piece{border:1px solid var(--line);background:var(--surface);overflow:hidden;
+  display:flex;flex-direction:column}
+.piece .art{aspect-ratio:4/3;display:grid;place-items:center;padding:0;text-align:center;overflow:hidden;
   background:linear-gradient(135deg,var(--jade-soft),var(--surface));border-bottom:1px solid var(--line)}
-.piece .art img{width:100%;height:100%;object-fit:cover;max-width:100%}
+.piece .art img{width:100%;height:100%;object-fit:cover;object-position:center;max-width:100%;display:block}
+.piece.feature{grid-column:span 2;grid-row:span 2}
+.piece.feature .art{aspect-ratio:auto;flex:1 1 auto;min-height:260px}
 .piece .art span{font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.1em;
   text-transform:uppercase;color:var(--muted)}
+@media (max-width:720px){
+  .gal{grid-template-columns:1fr}
+  .piece.feature{grid-column:auto;grid-row:auto}
+  .piece.feature .art{aspect-ratio:4/3;min-height:0}
+}
 .piece .cap{padding:14px 16px}
 .piece .cap b{display:block;color:var(--ink);font-weight:600;font-size:15.5px}
 .piece .cap small{color:var(--muted);font-size:13.5px}
@@ -130,6 +138,7 @@ footer{padding-block:36px 52px;color:var(--muted);font-size:14px}
       conversational-AI, customer service, and operations. I break, log, and verify AI voice products, and I design
       the brand and launch graphics that ship right beside them. Two disciplines, one obsession: getting the details right.</p>
     <div class="cta">
+      <!-- Put the two resume PDFs in the same folder as this file and keep these filenames. -->
       <a class="btn solid" href="Veronica_Pierce_Resume_REMOTE.pdf">Resume for Remote roles</a>
       <a class="btn" href="Veronica_Pierce_Resume_BOCA_RATON.pdf">Resume for Boca Raton</a>
       <a class="btn" href="mailto:Veronica@ticoai.net">Email me</a>
@@ -194,29 +203,29 @@ footer{padding-block:36px 52px;color:var(--muted);font-size:14px}
     <h2>Selected work</h2>
     <p class="sec-lead">A few pieces from the studio side of the practice.</p>
     <div class="gal">
-      <figure class="piece" style="margin:0">
-        <div class="art"><span>Add image</span></div>
-        <figcaption class="cap"><b>The Adventure of the Lost World Cup</b><small>Children's book illustration · published 2022</small></figcaption>
+      <figure class="piece feature" style="margin:0">
+        <div class="art"><img src="img/mural-lockers.jpg" alt="Hand-painted school locker-room mural with colorful sports lockers, jerseys and a checkerboard floor" loading="lazy" width="1400" height="1094"></div>
+        <figcaption class="cap"><b>Locker room mural</b><small>Large-format wall work, acrylic on stucco</small></figcaption>
       </figure>
       <figure class="piece" style="margin:0">
-        <div class="art"><span>Add image</span></div>
-        <figcaption class="cap"><b>Murals</b><small>Large-format wall work · Costa Rica</small></figcaption>
+        <div class="art"><img src="img/portrait-color.jpg" alt="Vivid multicolor acrylic portrait of a woman, signed VP" loading="lazy" width="620" height="826" style="object-position:center 22%"></div>
+        <figcaption class="cap"><b>Paintings and commissions</b><small>Acrylic on canvas, private clients</small></figcaption>
       </figure>
       <figure class="piece" style="margin:0">
-        <div class="art"><span>Add image</span></div>
-        <figcaption class="cap"><b>Paintings &amp; commissions</b><small>Private and corporate clients</small></figcaption>
+        <div class="art"><img src="img/portrait-diptych.jpg" alt="Two-panel acrylic portrait diptych of a man and a woman on an easel" loading="lazy" width="620" height="505"></div>
+        <figcaption class="cap"><b>Portrait diptych</b><small>Two-panel commission, acrylic</small></figcaption>
       </figure>
       <figure class="piece" style="margin:0">
-        <div class="art"><span>Add image</span></div>
+        <div class="art"><img src="img/world-cup-book.jpg" alt="Children's book illustration of two girls holding a colorful world map in a grass field" loading="lazy" width="620" height="496"></div>
+        <figcaption class="cap"><b>The Adventure of the Lost World Cup</b><small>Children's book illustration, published 2022</small></figcaption>
+      </figure>
+      <figure class="piece" style="margin:0">
+        <div class="art"><img src="img/wave-brand.jpg" alt="Wave brand graphic, an orange waving-hand mark and wordmark over a beach" loading="lazy" width="620" height="316"></div>
         <figcaption class="cap"><b>Wave campaign graphics</b><small>Marketing design for the product rollout</small></figcaption>
       </figure>
       <figure class="piece" style="margin:0">
-        <div class="art"><span>Add image</span></div>
-        <figcaption class="cap"><b>ATHENA launch graphics</b><small>Website and product design support</small></figcaption>
-      </figure>
-      <figure class="piece" style="margin:0">
-        <div class="art"><span>Add image</span></div>
-        <figcaption class="cap"><b>Digital art &amp; video</b><small>Promotional pieces and voiceover</small></figcaption>
+        <div class="art"><img src="img/athena-owl.jpg" alt="ATHENA logo, an owl drawn from circuit-board linework above the ATHENA wordmark" loading="lazy" width="620" height="465"></div>
+        <figcaption class="cap"><b>ATHENA launch graphics</b><small>Product identity and launch design</small></figcaption>
       </figure>
     </div>
   </div>
