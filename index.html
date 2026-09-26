@@ -60,6 +60,11 @@ h1{font-size:clamp(46px,8vw,82px);font-weight:700;line-height:1.02;letter-spacin
 .thesis em{font-style:italic;color:var(--jade)}
 .intro{margin:20px 0 0;max-width:62ch}
 .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.resumes{display:flex;flex-direction:column;gap:12px;margin-top:30px}
+.resume-row{display:flex;flex-wrap:wrap;align-items:center;gap:12px}
+.resume-label{font-weight:600;font-size:15px;flex:0 0 17.5em}
+@media (max-width:560px){.resume-row{gap:10px}.resume-label{flex-basis:100%}}
+.resumes + .cta{margin-top:18px}
 .btn{display:inline-block;padding:12px 20px;border-radius:2px;font-weight:600;font-size:15px;
   text-decoration:none;border:1.5px solid var(--ink);color:var(--ink);background:transparent}
 .btn.solid{background:var(--ink);color:var(--paper);border-color:var(--ink)}
@@ -138,9 +143,19 @@ footer{padding-block:36px 52px;color:var(--muted);font-size:14px}
       experience. Phones and email, front desk, scheduling, records and filing, data entry, invoicing,
       cash handling and inventory. Alongside that I have run my own painting and mural practice since 2008,
       and I take commissions here in the Chattanooga area.</p>
+    <div class="resumes">
+      <div class="resume-row">
+        <span class="resume-label">Resume, local Chattanooga</span>
+        <a class="btn solid" href="Veronica_Pierce_Resume_Local_Harrison.pdf" download>PDF</a>
+        <a class="btn" href="Veronica_Pierce_Resume_Local_Harrison.docx" download>Word</a>
+      </div>
+      <div class="resume-row">
+        <span class="resume-label">Resume, remote customer service</span>
+        <a class="btn solid" href="Veronica_Pierce_Resume_Remote_Call_Center.pdf" download>PDF</a>
+        <a class="btn" href="Veronica_Pierce_Resume_Remote_Call_Center.docx" download>Word</a>
+      </div>
+    </div>
     <div class="cta">
-      <a class="btn solid" href="Veronica_Pierce_Resume_Local_Harrison.pdf" download>Resume, local Chattanooga</a>
-      <a class="btn" href="Veronica_Pierce_Resume_Remote_Call_Center.pdf" download>Resume, remote customer service</a>
       <a class="btn" href="mailto:Veronica@ticoai.net">Email me</a>
     </div>
   </div>
