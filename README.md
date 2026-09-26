@@ -1,2 +1,5 @@
 # veronica-portfolio
-Portfolio site for Veronica Pierce. QA Specialist, Conversational-AI and Voice-Agent Quality, Customer Experience, Painter and Graphic Artist.
+
+Personal site for Veronica Pierce. Bilingual office and customer service assistant in Harrison, Tennessee. Painter and muralist taking commissions in the Chattanooga area.
+
+Live at https://veronica.ticoai.net
